@@ -10,7 +10,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/application/views/InscriptionView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/application/views/UtilisateurView.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setTitle("Application de Gestion Cosmétique");
             primaryStage.setScene(scene);
