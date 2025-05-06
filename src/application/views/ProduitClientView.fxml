@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml"
+	fx:controller="application.controllers.ClientProduitController" spacing="15"
+	alignment="TOP_CENTER" >
+	<Label text="Liste des produits disponibles"
+		style="-fx-font-size: 18px;" />
+
+	<TableView fx:id="produitTable" prefHeight="300"
+		prefWidth="600">
+		<columns>
+			<TableColumn fx:id="colNom" text="Nom" prefWidth="150" />
+			<TableColumn fx:id="colPrix" text="Prix (€)"
+				prefWidth="100" />
+			<TableColumn fx:id="colCategorie" text="Catégorie"
+				prefWidth="150" />
+		</columns>
+	</TableView>
+
+	<HBox spacing="10">
+		<Label text="Quantité :" />
+		<TextField fx:id="quantiteField" promptText="1"
+			prefWidth="60" />
+		<Button text="Ajouter au panier" onAction="#ajouterAuPanier" />
+		<Button text="Voir mon panier" onAction="#afficherPanier" />
+	</HBox>
+</VBox>
+
